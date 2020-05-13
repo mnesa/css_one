@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f4f4f4;
+  color: #343a40;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* utility */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+}
+.btn {
+  background: #0077f6;
+  color: #f4f4f4;
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn-2 {
+  color: #d93121;
+  border: 1px solid #d93121;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* header */
+#main-header {
+  background: #343a40;
+  color: #f4f4f4;
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.header-content .logo {
+  display: flex;
+  margin: 1rem;
+}
+
+.header-content .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.header-content .logo h2 {
+  padding: 0.5rem 1rem;
+}
+
+/* navigation */
+.nav-bar {
+  padding: 1.5rem;
+}
+.nav-bar ul {
+  list-style: none;
+}
+.nav-bar li {
+  display: inline;
+}
+.nav-bar a {
+  color: #828179;
+  text-decoration: none;
+  padding: 0.8rem 1.2rem;
+  font-weight: bold;
+}
+.nav-bar a:hover,
+.nav-bar .active {
+  color: #f4f4f4;
+}
+
+/* showcase */
+#showcase {
+  color: #f4f4f4;
+  background: #333333;
+  padding: 2rem;
+  position: relative;
+}
+#showcase:before {
+  content: "";
+  background: url("../img/showcase.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+#showcase .showcase-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 60vh;
+}
+
+#showcase .showcase-contain {
+  z-index: 1;
+}
+
+#showcase .showcase-contain p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+#showcase .showcase-contain h1 {
+  font-size: 3rem;
+}
+
+/* section-1 */
+.section-1 .boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.section-1 .boxes .fas {
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+/* section-2 */
+#section-2 {
+  background: #333;
+  color: #f4f4f4;
+  position: relative;
+  padding: 1rem;
+}
+#section-2::before {
+  content: "";
+  background: url(../img/lights.jpg) no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+#section-2 .section2-container {
+  text-align: center;
+  height: 150px;
+  padding-top: 3rem;
+}
+
+/* section-3 */
+.section-3 .boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 2rem 0;
+  border-bottom: 5px solid #343a40;
+}
+.section-3 .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section-3 .box p {
+  margin-bottom: 1rem;
+}
+
+/* section-4 */
+.section-4 {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.section-4 .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+/* section-5 */
+.section-5 {
+  background: #353a40;
+  color: #f4f4f4;
+  text-align: center;
+  padding: 2rem 0;
+}
+.section-5 form {
+  margin-top: 1.5rem;
+}
+.section-5 form input {
+  padding: 0.7rem 1rem;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* footer */
+.main-footer {
+  background: #333;
+  color: #f4f4f4;
+  padding: 2rem;
+  text-align: center;
+}
+
+.main-footer .fa {
+  font-size: 2.5rem;
+  color: #f4f4f4;
+  float: right;
+}
+
+/* media query */
+@media (max-width: 568px) {
+  .header-content {
+    grid-template-columns: 1fr;
+  }
+  .nav-bar ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .nav-bar li {
+    margin-bottom: 1rem;
+  }
+  .section-1 .boxes,
+  .section-3 .boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .section-4 .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section-5 form input {
+    padding: 0.5rem 0.8rem;
+    border: 0;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+  .section-5 .btn {
+    float: right;
+    padding: 0.3rem;
+    font-weight: normal;
+  }
+}
